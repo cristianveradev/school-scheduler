@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia la sessió al lloc</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <div class="moodle-container">
+        <div class="moodle-card">
+            
+            <div class="moodle-header">
+                <img src="https://educaciodigital.cat/insbadia/moodle/pluginfile.php/1/core_admin/logo/0x200/1772723487/LOGO-FP-BADIA-POSITIU.png" alt="Logo Institut" class="moodle-logo">
+            </div>
+
+            <div id="errorMsg" class="moodle-error"></div>
+
+            <form id="Login">
+                <div class="input-group">
+                    <input type="text" id="usuari" name="usuari" placeholder="Nom d'usuari o Correu Electrònic" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="Contrasenya" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Inicia la sessió</button>
+            </form>
+
+            <div class="google-login-container">
+                <div class="divider"><span>o</span></div>
+                <a href="http://localhost:3100/api/auth/google" class="btn-google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
+                    Inicia sessió amb Google
+                </a>
+            </div>
+
+            <div class="moodle-footer">
+                <a href="#">Heu oblidat el nom d'usuari o la contrasenya?</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="ts/login.ts"></script>
+</body>
+</html>

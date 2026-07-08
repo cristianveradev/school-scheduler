@@ -1,0 +1,28 @@
+# Dependencias (NUNCA se suben, ocupan demasiado)
+node_modules/
+
+# Archivos compilados (Ya configuramos que vayan a /dist)
+dist/
+*.tsbuildinfo
+
+# Variables de entorno (SECRETOS: contraseñas, tokens de JWT)
+.env
+.env.local
+
+# Base de datos SQLite (No queremos subir los datos de prueba)
+*.sqlite
+*.sqlite-journal
+
+# Logs y errores
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# VS Code (Opcional)
+# .vscode/  <-- Nota: No lo ignores si quieres compartir el launch.json con tu equipo

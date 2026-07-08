@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Horarios - Ins Badia</title>
+    <link rel="stylesheet" href="../css/calendario.css">
+    <link rel="stylesheet" href="../css/crearJerarquia.css">
+    <link rel="stylesheet" href="../css/franjas.css">
+    <link rel="stylesheet" href="../css/imparteix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="../img/favicon-FP-BADIA.png" alt="Logo Instituto Badia">
+                <div class="institute-info">
+                <h1>IES Badia del Vàlles</h1>
+                    <p>Formación Profesional</p>
+                </div>
+            </div>
+            <div id="userArea" class="user-area">
+                <span class="user-name">Administrador</span>
+                <i class="fas fa-user-circle user-icon"></i>
+                <button class="logout-btn">Tancar sessió</button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul id="menu">
+            <li id="btnCalendari"><a href="#"><i class="fas fa-calendar-plus"></i> Crear calendari</a></li>
+            <li id="btnJerarquia"><a href="#"><i class="fas fa-users"></i> Crear jerarquia alumnat</a></li>
+            <li id="btnFranges"><a href="#"><i class="fas fa-clock"></i> Configurar Franges Horàries</a></li>
+            <li id="btnDocent"> <a href="#"><i class="fas fa-user-plus"></i> Crear docent</a></li>
+            <li id="btnImparteix"><a href="#"><i class="fas fa-user-tie"></i> Assignar Docents</a></li>
+            <li id="vistaGrup"><a href="#"><i class="fas fa-calendar"></i> Vista grup</a></li>
+            <li id="vistaDocent"><a href="#"><i class="fas fa-chalkboard-teacher"></i> Vista docent</a></li>
+            <li id="vistaDepartament"><a href="#"><i class="fas fa-building"></i> Vista departament</a></li>
+            <li id="btnCrearUsuari"><a href="#"><i class="fas fa-user-plus"></i> Crear usuari</a></li>
+        </ul>
+    </nav>
+
+    <div id="cos"></div>
+    <div id="usuariContainer"></div>
+    <div id="usuarisFormContainer"></div>
+    <div id="usuarisListContainer"></div>
+
+    <main id="pizarra" class="app-container">
+        <!-- Aqui van los html gestionados por ts -->
+        
+
+    </main>
+
+    <script type="module" src="/ts/main.ts"></script>
+
+</body>
+</html>

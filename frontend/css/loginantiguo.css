@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    background: linear-gradient(to right, #1f1c2c, #928dab);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background: rgb(130, 124, 161);
+    padding: 2.5em;
+    border-radius: 1em;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    max-width: 100rem;
+    width: 20%;
+    min-width: 17rem;
+    text-align: center;
+    display: table-column;
+}
+p {
+    color: #312f2f;
+    font-size: clamp(0.7rem, 0.9vw, 2.25rem);
+    margin-bottom: 2em;
+}
+.logos {
+    width: 100%;
+    max-width: 100%;
+    padding: 1em;
+    outline: none;
+    transition: border 0.2s;
+    display: flex;
+    align-items: center;
+}
+.logos a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo1 {
+    width: clamp(3.5rem, 5vw, 10rem);
+    outline: none;
+    transition: border 0.2s;
+}
+input {
+    width: 100%;
+    font-size: clamp(0.6rem, 0.7vw, 2rem);
+    padding: 1em 1em;
+    margin: 0.8em 0;
+    border: 0.12em solid #ccc;
+    border-radius: 1em;
+    outline: none;
+    transition: border 0.2s;
+}
+input:focus {
+    border-color: #000;
+}
+button {
+    width: 100%;
+    padding: 0.9em;
+    margin-top: 0.8em;
+    background: black;
+    color: white;
+    font-size: clamp(0.6rem, 0.7vw, 2rem);
+    font-weight: bold;
+    border: none;
+    border-radius: 0.8em;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+button:hover {
+    opacity: 0.8;
+}
+.links {
+    margin-top: 1.5em;
+    font-size: clamp(0.6rem, 0.8vw, 2rem);
+}
+.links a {
+    color: #093ecf;
+    text-decoration: none;
+    font-weight: 500;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+.error {
+    color: red;
+    font-size: clamp(0.5rem, 0.6vw, 1.5rem);
+    margin-top: 0.8em;
+}
+footer {
+    margin-top: 2em;
+    font-size: clamp(0.5rem, 0.6vw, 1.5rem);
+    color: #cac6c6;
+}
