@@ -1,56 +1,253 @@
-# School Scheduler
+<div align="center">
 
-A full stack web application for managing school timetables, teachers, groups and modules.
+# 📚 School Scheduler
 
-This project was developed as a team project for the Higher Technician Degree in Web Application Development (DAW). It focuses on schedule creation, role-based access and timetable validation using a client-server architecture.
+### Web application for creating and managing school timetables
+
+A full-stack web application developed as the Final Degree Project (DAW) that allows educational institutions to create, organize and manage class schedules with drag & drop, teacher availability validation and role-based access.
+
+![Banner](assets/screenshots/15-calendar-complete.png)
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge)
+![License](https://img.shields.io/badge/license-Educational-blue?style=for-the-badge)
+
+</div>
 
 ---
 
-## Features
+# 📑 Table of Contents
 
-- User authentication with JWT
-- Role-based permissions
-- Teacher, group, course, module and department management
-- Timetable creation with drag and drop
-- Schedule conflict validation
+- About
+- Features
+- Demo
+- Screenshots
+- Technologies
+- Architecture
+- Installation
+- User Roles
+- Project Structure
+- Future Improvements
+- Authors
+
+---
+
+# 📖 About
+
+School Scheduler is a web application developed to simplify the creation and management of school timetables.
+
+The application allows administrators to:
+
+- Manage departments
+- Manage courses
+- Manage groups
+- Create modules
+- Assign teachers
+- Configure time slots
+- Generate schedules using Drag & Drop
+- Prevent timetable conflicts automatically
+
+The project was developed as the Final Degree Project for the Higher Vocational Training in Web Application Development (DAW).
+
+---
+
+# ✨ Features
+
+## Authentication
+
+- JWT Authentication
+- Google OAuth Login
+- Password encryption (bcrypt)
+
+---
+
+## User Management
+
+- Super Administrator
+- Administrator
+- Read-only User
+
+---
+
+## Academic Management
+
+- Departments
+- Cycles
+- Courses
+- Groups
+- Subjects (Modules)
+- Teachers
+
+---
+
+## Timetable Management
+
+- Drag & Drop scheduling
 - Teacher availability validation
-- Group timetable visualization
-- REST API built with Express
-- SQLite relational database
-- Image upload support for users and teachers
+- Module hour validation
+- Automatic conflict detection
+- Visual timetable
 
 ---
 
-## Tech Stack
+## Image Uploads
 
-### Frontend
+- User avatars
+- Image compression using Sharp
+- Multer upload system
+
+---
+
+# 🎥 Demo
+
+## Drag & Drop
+
+![Drag & Drop](assets/gifs/13-drag-drop.gif)
+
+---
+
+## Moving a module
+
+![Move Module](assets/gifs/17-move-module.gif)
+
+---
+
+## Removing a module
+
+![Remove Module](assets/gifs/18-remove-module.gif)
+
+---
+
+## Calendar filters
+
+![Filters](assets/gifs/11-calendar-filters.gif)
+
+---
+
+# 🖼️ Screenshots
+
+## Login
+
+![Login](assets/screenshots/01-1-login.png)
+
+---
+
+## Google Authentication
+
+![Google Login](assets/screenshots/01-2-login_google.png)
+
+---
+
+## Dashboard
+
+![Dashboard](assets/screenshots/02-dashboard.png)
+
+---
+
+## Academic hierarchy
+
+![Departments](assets/screenshots/03-departments.png)
+
+![Cycles](assets/screenshots/04-cycles.png)
+
+![Courses](assets/screenshots/05-courses.png)
+
+![Groups](assets/screenshots/06-groups.png)
+
+---
+
+## Modules
+
+![Modules](assets/screenshots/07-modules.png)
+
+---
+
+## Time Slots
+
+![Time Slots](assets/screenshots/08-time-slots.png)
+
+---
+
+## Teachers
+
+![Teachers](assets/screenshots/09-teachers.png)
+
+---
+
+## Teacher Assignment
+
+![Assignment](assets/screenshots/10-assign-teachers.png)
+
+---
+
+## Empty Calendar
+
+![Calendar](assets/screenshots/12-empty-calendar.png)
+
+---
+
+## Module Validation
+
+![Validation](assets/screenshots/14-full-module.png)
+
+---
+
+## Completed Schedule
+
+![Completed](assets/screenshots/15-calendar-complete.png)
+
+---
+
+## Conflict Validation
+
+![Validation](assets/screenshots/16-calendar-validation.png)
+
+---
+
+## User Management
+
+![Users](assets/screenshots/19-users.png)
+
+---
+
+# 🛠 Technologies
+
+## Frontend
 
 - HTML5
 - CSS3
 - TypeScript
 - Vite
 
-### Backend
+## Backend
 
 - Node.js
 - Express
 - TypeScript
 - REST API
 
-### Database
+## Database
 
 - SQLite
 - Knex.js
 - Objection.js
 
-### Authentication and files
+## Authentication and files
 
 - JWT
 - bcryptjs
+- Google OAuth
+
+## Image Processing
+
 - Multer
 - Sharp
 
-### Tools
+## Tools
 
 - Git
 - GitLab
@@ -60,7 +257,33 @@ This project was developed as a team project for the Higher Technician Degree in
 
 ---
 
-## Project Structure
+# 🏗 Architecture
+
+```
+Frontend (Vite + TypeScript)
+        │
+ REST API (Express)
+        │
+ Authentication (JWT)
+        │
+SQLite Database
+        │
+Knex + Objection ORM
+```
+
+---
+
+# 👥 User Roles
+
+| Role | Permissions |
+|------|-------------|
+| Super Admin | Full system management |
+| Admin | Academic management |
+| Read Only | View schedules |
+
+---
+
+# 📂 Project Structure
 
 ```text
 school-scheduler/
@@ -79,6 +302,10 @@ school-scheduler/
 │   ├── img/
 │   └── ts/
 │
+├── assets
+│   ├── gifs
+│   ├── screenshots
+│
 └── README.md
 ```
 
@@ -96,87 +323,62 @@ school-scheduler/
 
 ---
 
-## Installation
+# 🚀 Installation
 
-### 1. Clone the repository
+## Clone the repository
 
 ```bash
 git clone https://github.com/cristianveradev/school-scheduler.git
-cd school-scheduler
 ```
 
-### 2. Backend setup
+## Install backend
 
 ```bash
 cd backend
 npm install
 ```
 
-Create a `.env` file inside the `backend` folder:
-
-```env
-PORT=3000
-JWT_SECRET=your_jwt_secret
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-```
-
-Run the backend:
-
-```bash
-npm run dev
-```
-
-### 3. Frontend setup
-
-Open a new terminal:
+## Install frontend
 
 ```bash
 cd frontend
 npm install
+```
+
+## Run backend
+
+```bash
+npm run dev
+```
+
+## Run frontend
+
+```bash
 npm run dev
 ```
 
 ---
 
-## Environment Variables
+# 🚧 Future Improvements
 
-This project uses environment variables for authentication and external services.
-
-Do not upload your real `.env` file or Google OAuth credentials to GitHub.
-
-Use `.env.example` as a reference.
-
----
-
-## Screenshots
-
-Screenshots will be added soon.
-
-Recommended screenshots:
-
-- Login page
-- Dashboard
-- Timetable view
-- Drag and drop schedule creation
-- User management
+- Export timetable to PDF
+- Responsive mobile version
+- Dark mode
+- Notifications
+- Automatic timetable generation
+- Statistics dashboard
 
 ---
 
-## Future Improvements
-
-- Add automated tests
-- Add Docker support
-- Improve responsive design
-- Add PostgreSQL support
-- Add deployment documentation
-- Add a public demo version
-
----
-
-## Author
+# 👨‍💻 Authors
 
 **Cristian Vera Rodríguez**
+
+Final Degree Project (DAW)
+
+IES Badia del Vallès
+
+2026
 
 - GitHub: [@cristianveradev](https://github.com/cristianveradev)
 - LinkedIn: [Cristian Vera Rodríguez](https://www.linkedin.com/in/cristian-vera-rodriguez-13299320b/)
